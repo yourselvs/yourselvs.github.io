@@ -386,7 +386,7 @@ teamstats &lt;- teamstats %&gt;%
 <p>With the data sets ready to use, I wanted to get an initial visualization of some of the data, so I tried finding a few different data points I was interested in.</p>
 <div id="game-duration" class="section level2">
 <h2>Game Duration</h2>
-<p>League games are definitely a timesink, and can last anywhere from 15 to 60 minutes. Over the past couple seasons, some of the changes to the game have been aimed towards reducing the game time. I averaged the game times for each version and graphed it below. Games have definitely been getting shorter recently, but not by a ton.</p>
+<p>League games are definitely a timesink and can last anywhere from 15 to 60 minutes. Over the past couple seasons, some of the changes to the game have been aimed towards reducing the game time. I averaged the game times for each version and graphed it below. Games have definitely been getting shorter recently, but not by a ton.</p>
 <pre class="r"><code>participants %&gt;%
   group_by(ver_major, ver) %&gt;%
   # Get the average duration for each version in seconds converted to minutes
@@ -504,7 +504,7 @@ kda_stats %&gt;%
 <p>At the beginning of the game we only know what champions are picked/banned. In order to determine who will win from that, I’m going to need to determine some data about each team and whether that affects their chances of winning.</p>
 <div id="csmin" class="section level2">
 <h2>CS/Min</h2>
-<p>The first variable I’m interested in is the champions CS per minute. CS is Creep Score, and is the number of little minions you kill during a game. Killing the minions grants gold, and CS is one of the best ways to increase your gold income in a game</p>
+<p>The first variable I’m interested in is the champions CS per minute. CS is Creep Score and is the number of little minions you kill during a game. Killing the minions grants gold, and CS is one of the best ways to increase your gold income in a game</p>
 <div id="calculate-csmin-for-each-person-in-each-game" class="section level3">
 <h3>Calculate CS/Min for each person in each game</h3>
 <p>First I calculated the CS/Min rate for each person per game. However, only 3 out of the 5 roles actually are focused on killing minions. The first three go down each lane and kill the minions, the fourth supports the champion in the bottom lane, and the fifth roams around the map. I only need to consider the three important positions.</p>
@@ -1490,7 +1490,7 @@ ratio_df %&gt;%
 </div>
 <div id="test-correlation-between-deviation-from-optimal-and-winrate" class="section level3">
 <h3>Test correlation between deviation from optimal and winrate</h3>
-<p>It seems that the optimal damage ratio is about 0.7, so I want to determine each team’s deviation from that optimal, and see how it affects winrate. There is definitely a correlatioin, so the distance from optimal damage ratio is a useful attribute.</p>
+<p>It seems that the optimal damage ratio is about 0.7, so I want to determine each team’s deviation from that optimal and see how it affects winrate. There is definitely a correlation, so the distance from optimal damage ratio is a useful attribute.</p>
 <pre class="r"><code>ratio_df &lt;-ratio_df %&gt;%
   # Store optimal ratio
   mutate(optimal = 7) %&gt;%
@@ -1770,7 +1770,7 @@ matches %&gt;%
 </div>
 <div id="test-for-optimal-role-ban-rate" class="section level3">
 <h3>Test for optimal role ban rate</h3>
-<p>I want to also check how winrate is affected by the role a team bans. I need to graph each role ban and it’s corresponding winrate. Overall, the graph doesn’t show any common pattern, so the role banned by a team probably isn’t useful data.</p>
+<p>I want to also check how winrate is affected by the role a team bans. I need to graph each role ban and it’s corresponding winrate. Overall, the graph doesn’t show any significant pattern, so the role banned by a team probably isn’t useful data.</p>
 <pre class="r"><code>top_bans &lt;- avg_bans %&gt;%
   # Get top ban winrates
   group_by(pct_top) %&gt;%
@@ -1951,7 +1951,7 @@ FALSE
 <h3>Predict game winners pre-game and visualize error rates</h3>
 <p>I want to create a classification prediction model to determine game winner. I’m also using cross-validation to determine the error rate, and how often the model can predict a game winner.</p>
 <p>After the model is trained and tested, the error rate comes out to about 42% on the model. That means that I’m only 8% better than a coin flip even after all the data I extrapolated. While that number may seem small, the game is made to be as close to a coin flip as possible, and a 8% increase over that is very valuable to players who are looking for any advantage they can.</p>
-<p>There are also other ways I could have improved my model that weren’t possible due to the data set. I could also take into account each player’s past performance overall, or more specifically on the character and role they are playing. I also could have gone more in depth with the data I’ve got, and looked at the winrates of the players banned.</p>
+<p>There are also other ways I could have improved my model that weren’t possible due to the data set. I could also take into account each player’s past performance overall, or more specifically on the character and role they are playing. I also could have gone more in depth with the data I've got and looked at the winrates of the champions banned.</p>
 <pre class="r"><code>team_data &lt;- team_df %&gt;%
   na.omit()
 
@@ -2305,7 +2305,7 @@ FALSE
 </div>
 <div id="predict-game-winners-post-game-and-visualize-error-rates" class="section level3">
 <h3>Predict game winners post-game and visualize error rates</h3>
-<p>Using the new stats I got from after the game ended, my model imporved to a 3% error rate. This is much more re-assuring, but a much more useless prediction model.</p>
+<p>Using the new stats I got from after the game ended, my model improved to a 3% error rate. This is much more re-assuring, but a much more useless prediction model.</p>
 <pre class="r"><code>full_set &lt;- full_team_df %&gt;%
   na.omit()
 
@@ -2354,12 +2354,14 @@ error
 </div>
 <div id="conclusion" class="section level1">
 <h1>Conclusion</h1>
-<p>By limiting myself to only looking at pre-game statistics, I created a model that was only marginally better than a coin flip. However, this result was better than expected. First, considering the efforts the developers have made to make the game as even as possible, anything significantly different than 50% is an improvenemnt and a useful model. Additionally, the game is built to be primarily decided by each individual player’s performance during the game rather than what they pick before the game starts.</p>
+<p>By limiting myself to only looking at pre-game statistics, I created a model that was only marginally better than a coin flip. However, this result was better than expected. First, considering the efforts the developers have made to make the game as even as possible, anything significantly different than 50% is an improvement and a useful model. Additionally, the game is built to be primarily decided by each individual player’s performance during the game rather than what they pick before the game starts.</p>
 <p>With more extensive analysis I could expand my initial model and possibly improve the accuracy, but the data set is limited. I answered a lot of questions I had about the game, and this process has made me even more excited to potentially expand this to more games that I love, such as CS:GO, PUBG, or Rocket League.</p>
 </div>
 <div id="further-reading" class="section level1">
 <h1>Further Reading</h1>
-<p><a href="https://www.tidyverse.org/">Tidyverse</a> <a href="https://en.wikipedia.org/wiki/Predictive_modelling">Predictive Modelling</a> <a href="https://na.leagueoflegends.com/en/">League of Legends</a></p>
+<p><a href="https://www.tidyverse.org/">Tidyverse</a> </p>
+<p><a href="https://en.wikipedia.org/wiki/Predictive_modelling">Predictive Modelling</a> </p>
+<p><a href="https://na.leagueoflegends.com/en/">League of Legends</a></p>
 </div>
 
 
