@@ -292,7 +292,10 @@ Mode &lt;- function(x) {
   ux &lt;- unique(x)
   ux[which.max(tabulate(match(x, ux)))]
 }</code></pre>
-<p>I also needed to create a few functions that I’ll use down the line * I need to label version graphs without the x axis getting to cramped * I need a function to easily create a table with my preferred settings * I need a function to find the mode of a variable</p>
+<p>I also needed to create a few functions that I’ll use down the line
+<ul><li>I need to label version graphs without the x axis getting to cramped </li>
+<li>I need a function to easily create a table with my preferred settings</li>
+<li>I need a function to find the mode of a variable</li></ul></p>
 <pre class="r"><code># Read in champion id data
 champs &lt;- read_csv(&quot;champs.csv&quot;) %&gt;%
   drop_na() %&gt;%
