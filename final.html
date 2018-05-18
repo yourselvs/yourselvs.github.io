@@ -2297,7 +2297,7 @@ error_rates &lt;- sapply(1:10, function(fold_index) {
   
   c(logis_error, forest_error)
 })
-<pre class="r"><code>rownames(error_rates) &lt;- c(&quot;logis_error&quot;, &quot;forest_error&quot;)
+rownames(error_rates) &lt;- c(&quot;logis_error&quot;, &quot;forest_error&quot;)
 
 avg_error_rates &lt;- as.data.frame(t(error_rates)) %&gt;%
   mutate(fold=1:n()) %&gt;%
