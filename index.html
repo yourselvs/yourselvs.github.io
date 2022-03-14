@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <title>yourselvs</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.js" type="text/javascript"></script>
     <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
@@ -15,95 +18,53 @@
     <link rel="manifest" href="/site.webmanifest?v=2">
     <link rel="mask-icon" href="/safari-pinned-tab.svg?v=2" color="#5bbad5">
     <link rel="shortcut icon" href="/favicon.ico?v=2">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bevan">
     <meta name="msapplication-TileColor" content="#00aba9">
     <meta name="theme-color" content="#ffffff">
   </head>
   <body>
-    <section class="page-header">
+    <!-- <section class="page-header">
       <img src=mmlogo.png width="200" height="200">
       <h1 class="project-name">Michael Makogon</h1>
       <h2 class="project-tagline">aka <i>yourselvs</i></h2>
-    </section>
+    </section> -->
 
-    <section class="main-content">
-      <h2>
-        Welcome to my website.
-      </h2>
-
-      <p>
-        Hello! My name is Michael Makogon (aka <i>yourselvs</i>, misspelt on purpose) and I am a software developer currently employed at Higher Logic. 
-        I am also a computer science graduate from the Universty of Maryland. This site is a hub of some of my personal projects and information. 
-        If you have any questions about me or the information on this site, contact me at <a id="yourselvs-email" href="mailto:info@yourselvs.me">info@yourselvs.me</a>.
-      </p>
+    <section class="main-container">
+      <div class="page-header">
+        <img src=mmlogo.png width="58" height="58">
+        <div class="page-header-text">
+          <h1 class="project-name">Michael Makogon</h1>
+          <h2 class="project-tagline">aka <i>yourselvs</i></h2>
+        </div>
+        <div class="header-content">
+          <ul class="external-links">
+            <li class="nav-item">
+              <a class="external-link" href="mailto:info@yourselvs.me" target="_blank" rel="noopener noreferrer">EMAIL</a></li>
+            </li>
+            <li class="nav-item">
+              <a class="external-link" href="https://github.com/yourselvs/" target="_blank" rel="noopener noreferrer">GITHUB</a>
+            </li>
+            <li class="nav-item">
+              <a class="external-link" href="https://www.linkedin.com/in/michaelmakogon/" target="_blank" rel="noopener noreferrer">LINKEDIN</a>
+            </li>
+          </ul>
+        </div>
+      </div>
       
-      <h2>
-        Contacts/Links
-      </h2>      
-
-      <ul>
-        <li>E-mail: <a id="yourselvs-email" href="mailto:info@yourselvs.me">info@yourselvs.me</a></li>
-        <li><a href="https://github.com/yourselvs/">GitHub</a></li>
-        <li><a href="https://www.linkedin.com/in/michaelmakogon/">LinkedIn</a></li>
-      </ul>      
-            
-      <h2>
-        Projects
-      </h2>      
-
-      <h3>
-        Predicting League of Legends
-      </h3>
-      
-      <p>
-        For the final project of my Introduction to Data Science, we had to analyze a data set. 
-        I love League of Legends, and I chose to focus my project around the game. 
-        I tried to predict the winner of a game using 180,000 matches using linear regression in R. 
-        You can find the final project <a href="https://yourselvs.me/final">here</a>.
-      </p>
-
-      <h3>
-        Krane Multigames
-      </h3>
-
-      <p>
-        <a id="steam-mg-map" href="http://steamcommunity.com/sharedfiles/filedetails/?id=483298969">Krane multigames</a> is a 
-        CS:GO multigames map featuring 17 minigames, 8 of which are completely original. 
-        Each round, players have to jump around the center platforms to find the correct one. 
-        The winner gets to choose the minigame of the round. Minigames range from team battles to courses with a single winner. 
-        I don't update it as much as I used to, but it's one of my favorite projects.
-      </p>
-
-      <h3>
-          Co-op Retribution
-      </h3>
-
-      <p>
-        Co-op Retribution (working title) is a single-player experience built in CS:GO where I worked as the programmer in a 3-person team. 
-        CS:GO is a multiplayer game, and has limited functionality we could use for single-player mechanics. 
-        I set up an event-based system behind all of the events in the map, controlling player movement throughout the map and orchestrating setpieces. 
-        I created a spawning framework that allowed spawning new enemies to be very simple yet very customizable. 
-        I also created makeshift AI for a companion to provide fire support. 
-        The project isn't completed yet so it isn't public. Scripts were done in <a href="http://www.squirrel-lang.org/">Squirrel</a>.
-      </p>
-
-      <h3>
-        Minecraft
-      </h3>
-
-      <p>
-        My Minecraft multiplayer plugins use <a href="https://bukkit.org/">Bukkit</a>/<a href="https://www.spigotmc.org/">Spigot</a>. 
-        My biggest and most recent project is the <a id="dungeons-link" href="https://github.com/yourselvs/Dungeons">Dungeons plugin</a>. 
-        The plugin allows servers to create timed courses for players to travel through. 
-        Players are able to compete and compare their fastest times. 
-        Data is handled in MongoDB, and the plugin is interfaced with using the command line. 
-        I've also released the <a id="suggestion-link" href="https://github.com/yourselvs/SuggestionHelper">SuggestionHelper plugin</a>, 
-        allowing players to send suggestion tickets to the server, and a prototype 
-        for the <a id="simplepoll-link" href="https://github.com/yourselvs/SimplePoll">SimplePoll plugin</a>, which lets a server create polls.
-      </p>
-
-      <footer class="site-footer">
-        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
-      </footer>
+      <div class="main-content">
+        <h3>About Me</h3>
+        <p>Hello! My name is Michael Makogon, and I am a full-stack web developer and video game tinkerer. 
+          I go by <i><strong>yourselvs</strong></i> all over the internet. A long time ago I had a root beer phase, and I'm 
+          just reaching the tail end of my hot sauce phase now. ETA Q4 2022 to Q2 2023. 
+          I've been keeping my eye out for a new phase to transition into, maybe smoked meats or golf.
+          I'm currently employed as a software devloper at Higher Logic.
+        </p>
+        <p>
+          If you have any questions or hot sauce recommendation requests, 
+          feel free to <a id="yourselvs-email" href="mailto:info@yourselvs.me">contact me</a>.
+        </p>
+      </div>
     </section>
   </body>
 </html>
