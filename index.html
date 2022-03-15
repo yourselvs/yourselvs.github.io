@@ -20,6 +20,9 @@
     <link rel="shortcut icon" href="/favicon.ico?v=2">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bevan">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kadwa:wght@700&display=swap" rel="stylesheet">
     <meta name="msapplication-TileColor" content="#00aba9">
     <meta name="theme-color" content="#ffffff">
   </head>
@@ -32,7 +35,7 @@
 
     <section class="main-container">
       <div class="page-header">
-        <img src=mmlogo.png width="58" height="58">
+        <img src=mmlogo.png width="64" height="64">
         <div class="page-header-text">
           <h1 class="project-name">Michael Makogon</h1>
           <h2 class="project-tagline">aka <i>yourselvs</i></h2>
@@ -40,7 +43,7 @@
         <div class="header-content">
           <ul class="external-links">
             <li class="nav-item">
-              <a class="external-link" href="mailto:info@yourselvs.me" target="_blank" rel="noopener noreferrer">EMAIL</a></li>
+              <a class="external-link" href="mailto:michael@yourselvs.me" target="_blank" rel="noopener noreferrer">EMAIL</a></li>
             </li>
             <li class="nav-item">
               <a class="external-link" href="https://github.com/yourselvs/" target="_blank" rel="noopener noreferrer">GITHUB</a>
@@ -51,19 +54,78 @@
           </ul>
         </div>
       </div>
-      
-      <div class="main-content">
-        <h3>About Me</h3>
-        <p>Hello! My name is Michael Makogon, and I am a full-stack web developer and video game tinkerer. 
-          I go by <i><strong>yourselvs</strong></i> all over the internet. A long time ago I had a root beer phase, and I'm 
-          just reaching the tail end of my hot sauce phase now. ETA Q4 2022 to Q2 2023. 
-          I've been keeping my eye out for a new phase to transition into, maybe smoked meats or golf.
-          I'm currently employed as a software devloper at Higher Logic.
+
+      <div class="hello-header">
+        <p>
+          I'm Michael, a 
+          <span class="text-highlight">
+            full-stack web developer
+          </span> 
+          and video game tinkerer based in Washington, DC.
         </p>
         <p>
-          If you have any questions or hot sauce recommendation requests, 
-          feel free to <a id="yourselvs-email" href="mailto:info@yourselvs.me">contact me</a>.
+          I go by 
+          <span class="text-highlight">
+            yourselvs
+          </span> 
+          all over the internet.
         </p>
+      </div>
+      
+      <div class="main-content">
+        <div class="content-row">
+          <div class="row-text-left">
+            <h3>More About Me</h3>
+            <p>A long time ago I had a root beer phase, and I'm 
+              just reaching the tail end of my hot sauce phase now. ETA Q4 2022 to Q2 2023. 
+              I've been keeping my eye out for a new phase to transition into, maybe smoked meats or golf.
+              I'm currently employed as a software developer at Higher Logic.
+            </p>
+          </div>
+          <div class="row-image-right">
+            <div class="portrait-image-container">
+              <img class="portrait-image" src="portrait.png" />
+            </div>
+          </div>
+        </div> 
+        <div>
+          <div class="row-text">
+            <p>
+              If you have any questions or hot sauce recommendation requests, 
+              <a 
+                id="yourselvs-email" 
+                href="mailto:michael@yourselvs.me"
+                class="link-highlight"
+              >
+                email me
+              </a> or fill out the form below.
+            </p>
+          </div>
+        </div>
+        <div class="contact-form-container">
+          <form action="https://formsubmit.co/contact@yourselvs.me" method="POST" data-toggle="validator" role="form">
+            <div class="mb-3">
+              <label for="InputName" class="form-label">What should I call you?</label>
+              <input type="text" class="form-control" id="InputName" placeholder="Name" required>
+            </div>
+            <div class="mb-3">
+              <label for="InputEmail" class="form-label">Where can I reach you?</label>
+              <input type="email" class="form-control" id="InputEmail" aria-describedby="emailHelp" placeholder="Email address" required>
+            </div>
+            <div class="mb-3">
+              <label for="InputMessage" class="form-label">What's your message?</label>
+              <textarea id="InputMessage" class="form-control" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn">
+              Submit
+            </button>
+            <!-- Formsubmit data below -->
+            <input type="text" name="_honey" style="display:none">
+            <input type="hidden" name="_captcha" value="false">
+          </form>
+        </div>
+
+        
       </div>
     </section>
   </body>
