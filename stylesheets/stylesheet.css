@@ -273,6 +273,9 @@ a:hover {
   border: 1px solid #545456;
   width: 256px;
 }
+.portrait-pre-content {
+  display: none;
+}
 
 .contact-form-container {
   border: 1px solid #545456;
@@ -326,6 +329,7 @@ a:hover {
   
   .portrait-image {
     box-shadow: 0px 0px 40px rgba(100, 211, 211, 0.4);
+    width: 356px;
   }
 }
 
@@ -349,6 +353,29 @@ a:hover {
   }
 }
 
+@media screen and (max-width: 50em) {
+  .external-links {
+    display: list-item;
+    text-align: right;
+  }
+
+  .external-link {
+    padding: 0;
+  }
+
+  .portrait-side-content {
+    display: none;
+  }
+
+  .portrait-pre-content {
+    display: block;
+  }
+  
+  .portrait-image {
+    width: 356px;
+  }
+}
+
 @media screen and (max-width: 44em) {
   .main-container {
     margin: 4rem 2rem;
@@ -365,26 +392,6 @@ a:hover {
   
   .portrait-image {
     box-shadow: 0px 0px 25px rgba(100, 211, 211, 0.4);
-  }
-}
-
-@media screen and (max-width: 50em) {
-  .external-links {
-    display: list-item;
-    text-align: right;
-  }
-
-  .external-link {
-    padding: 0;
-  }
-
-  .portrait-side-content {
-    display: none;
-  }
-}
-
-@media screen and (min-width: 50em) {
-  .portrait-pre-content {
-    display: none;
+    width: 256px;
   }
 }
